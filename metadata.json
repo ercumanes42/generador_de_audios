@@ -1,0 +1,6 @@
+{
+  "name": "Gemini TTS Studio",
+  "description": "Una aplicación impulsada por IA para mejorar textos y generar locuciones usando las voces premium de Gemini TTS, con almacenamiento persistente del historial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

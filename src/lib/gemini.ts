@@ -1,6 +1,10 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const apiKey = typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY 
+  ? process.env.GEMINI_API_KEY 
+  : "MISSING_API_KEY";
+
+const ai = new GoogleGenAI({ apiKey: apiKey });
 
 // Utility to sleep to avoid hitting API rate limits
 const delay = (ms: number, signal?: AbortSignal) => new Promise<void>((resolve, reject) => {

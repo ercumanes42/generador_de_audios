@@ -74,7 +74,7 @@ export default function App() {
       setEnhancedText(result);
     } catch (err: any) {
       if (err.message !== "Cancelado") console.error(err);
-      if (err.message !== "Cancelado") alert("Error al mejorar el texto.");
+      if (err.message !== "Cancelado") alert("Error al mejorar el texto: " + (err.message || "Error desconocido"));
     } finally {
       setIsEnhancing(false);
       setProgress(null);
@@ -117,7 +117,7 @@ export default function App() {
       
     } catch (err: any) {
       if (err.message !== "Cancelado") console.error(err);
-      if (err.message !== "Cancelado") alert("Error al generar el audio.");
+      if (err.message !== "Cancelado") alert("Error al generar el audio: " + (err.message || "Error desconocido"));
     } finally {
       setIsGenerating(false);
       setProgress(null);

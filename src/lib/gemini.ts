@@ -77,7 +77,7 @@ Return ONLY the enhanced text, nothing else.
 Input text: ${chunkText}`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.1-pro-preview",
+      model: "gemini-3.1-flash",
       contents: prompt,
       config: {
           temperature: 0.7,
